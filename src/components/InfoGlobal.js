@@ -9,6 +9,7 @@ import {
   ListItemAvatar,
 } from "@material-ui/core";
 import moment from "moment";
+import "moment/locale/es";
 import IconNewConfirmed from "@material-ui/icons/AddAlert";
 import IconTotalConfirmed from "@material-ui/icons/AirlineSeatFlat";
 import IconNewDeaths from "@material-ui/icons/NewReleases";
@@ -25,10 +26,12 @@ const InfoGlobal = ({
   NewRecovered,
   TotalRecovered,
 }) => {
+  moment.locale("es");
+
   return (
     <Card className="card">
       <CardHeader
-        title="Información Global de COVID-19"
+        title="Información Global"
         subheader={moment(date).format("LLLL")}
       />
       <div className="card-row">
