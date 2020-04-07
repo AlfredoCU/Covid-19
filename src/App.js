@@ -1,18 +1,48 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
+import React, { Component } from "react";
+import InfoGlobal from "./components/InfoGlobal";
+import { Grid } from "@material-ui/core";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>COVID-19</p>
-        <Button variant="outlined" color="secondary">
-          Trabajando
-        </Button>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    data: [],
+  };
+
+  stateData = (dataApi) => {
+    this.setState({ data: dataApi });
+  };
+
+  getData = async () => {
+    let response = await fetch("https://api.covid19api.com/summary");
+    let data = await response.json();
+    this.stateData(data);
+  };
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  render() {
+    const { data } = this.state;
+    return (
+      <>
+        <header className="app-header">
+          <h1>COVID-19</h1>
+        </header>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <InfoGlobal
+            date={data.Date}
+            NewConfirmed={data.Global && data.Global.NewConfirmed}
+            TotalConfirmed={data.Global && data.Global.TotalConfirmed}
+            NewDeaths={data.Global && data.Global.NewDeaths}
+            TotalDeaths={data.Global && data.Global.TotalDeaths}
+            NewRecovered={data.Global && data.Global.NewRecovered}
+            TotalRecovered={data.Global && data.Global.TotalRecovered}
+          />
+        </Grid>
+      </>
+    );
+  }
 }
 
 export default App;
