@@ -41,8 +41,8 @@ const InfoGlobal = ({
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
-                primary="Nuevos confirmado: "
-                secondary={NewConfirmed}
+                primary={NewConfirmed}
+                secondary="Nuevos confirmado"
               />
             </ListItem>
             <ListItem>
@@ -52,8 +52,8 @@ const InfoGlobal = ({
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
-                primary="Total confirmado: "
-                secondary={TotalConfirmed}
+                primary={TotalConfirmed}
+                secondary="Total confirmado"
               />
             </ListItem>
             <ListItem>
@@ -62,7 +62,7 @@ const InfoGlobal = ({
                   <IconNewDeaths className="color2" />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Nuevas muertes: " secondary={NewDeaths} />
+              <ListItemText primary={NewDeaths} secondary="Nuevas muertes" />
             </ListItem>
           </List>
         </div>
@@ -75,10 +75,7 @@ const InfoGlobal = ({
                   <IconTotalDeaths className="color2" />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText
-                primary="Muertes totales: "
-                secondary={TotalDeaths}
-              />
+              <ListItemText primary={TotalDeaths} secondary="Muertes totales" />
             </ListItem>
             <ListItem>
               <ListItemAvatar>
@@ -87,8 +84,8 @@ const InfoGlobal = ({
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
-                primary="Nuevos recuperado: "
-                secondary={NewRecovered}
+                primary={NewRecovered}
+                secondary="Nuevos recuperado"
               />
             </ListItem>
             <ListItem>
@@ -98,8 +95,8 @@ const InfoGlobal = ({
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
-                primary="Total recuperado: "
-                secondary={TotalRecovered}
+                primary={TotalRecovered}
+                secondary="Total recuperado"
               />
             </ListItem>
           </List>
