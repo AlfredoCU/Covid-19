@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import InfoGlobal from "./components/InfoGlobal";
 import SearchInfo from "./components/SearchInfo";
+import CountryInfo from "./components/CountryInfo";
 import { Grid } from "@material-ui/core";
 import "./App.css";
 
@@ -44,6 +45,9 @@ class App extends Component {
         </Grid>
         <Grid container direction="row" justify="center" alignItems="center">
           <SearchInfo Countries={data.Countries} />
+        </Grid>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <CountryInfo Countries={data.Countries} />
         </Grid>
       </>
     );

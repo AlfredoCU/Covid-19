@@ -10,7 +10,7 @@ const SearchInfo = ({ Countries }) => {
       />
       <div className="space">
         <form noValidate>
-          <input type="text" list="data" />
+          <input type="text" list="data" placeholder="Buscar país..." />
           <datalist id="data">
             {Countries &&
               Countries.map((item, key) => (
