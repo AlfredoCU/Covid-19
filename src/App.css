@@ -9,17 +9,23 @@
 
 .app-header h1 {
   color: white;
-  text-shadow: 0px 0px 8px rgba(30, 136, 229, 0.25);
+  text-shadow: 0px 0px 8px rgba(237, 239, 241, 0.25);
 }
 
-/** CARDS **/
+/** CARDS GLOBAL **/
 .card {
   width: 700px;
+  margin-bottom: 30px;
   text-align: center;
   color: white !important;
   border: 1px solid #1976d2;
   background-color: #282c34 !important;
   box-shadow: 0px 0px 6px 2px rgba(25, 118, 210, 0.25) !important;
+}
+
+.card-form {
+  border: 1px solid #f50057;
+  box-shadow: 0px 0px 6px 2px rgba(245, 0, 87, 0.25) !important;
 }
 
 .card span,
@@ -32,6 +38,10 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.space {
+  padding-bottom: 20px;
 }
 
 /** AVATAR **/
@@ -58,4 +68,49 @@ p {
 
 .color3 {
   color: #2196f3;
+}
+
+/** FORM **/
+input {
+  width: 210px;
+  color: white;
+  font-size: 15px;
+  line-height: 1.6;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  margin: 10px 10px 10px 10px;
+  border: 1px solid #f50057;
+  background-color: transparent;
+  box-shadow: 0px 0px 6px 2px rgba(245, 0, 87, 0.25);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #f50057;
+}
+
+/** Selection site web **/
+::selection {
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.25);
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.25);
+}
+
+/** Body Scroll **/
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #282c34;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(211, 211, 211, 0.4);
 }

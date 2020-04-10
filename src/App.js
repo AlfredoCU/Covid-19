@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import InfoGlobal from "./components/InfoGlobal";
+import SearchInfo from "./components/SearchInfo";
 import { Grid } from "@material-ui/core";
 import "./App.css";
 
@@ -24,6 +25,7 @@ class App extends Component {
 
   render() {
     const { data } = this.state;
+
     return (
       <>
         <header className="app-header">
@@ -39,6 +41,9 @@ class App extends Component {
             NewRecovered={data.Global && data.Global.NewRecovered}
             TotalRecovered={data.Global && data.Global.TotalRecovered}
           />
+        </Grid>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <SearchInfo Countries={data.Countries} />
         </Grid>
       </>
     );

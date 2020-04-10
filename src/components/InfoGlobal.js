@@ -13,9 +13,9 @@ import "moment/locale/es";
 import IconNewConfirmed from "@material-ui/icons/AddAlert";
 import IconTotalConfirmed from "@material-ui/icons/AirlineSeatFlat";
 import IconNewDeaths from "@material-ui/icons/NewReleases";
-import IconTotalDeaths from "@material-ui/icons/MoodBad"; // SentimentVeryDissatisfied
+import IconTotalDeaths from "@material-ui/icons/MoodBad";
 import IconNewRecovered from "@material-ui/icons/AccessibilityNew";
-import IconTotalRecovered from "@material-ui/icons/EmojiEmotions"; // TagFaces
+import IconTotalRecovered from "@material-ui/icons/EmojiEmotions";
 
 const InfoGlobal = ({
   date,
