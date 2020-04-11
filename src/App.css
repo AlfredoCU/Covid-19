@@ -94,6 +94,14 @@ input:focus {
   border: 2px solid #f50057;
 }
 
+.MuiSelect-select.MuiSelect-select {
+  color: white;
+}
+
+.MuiSelect-icon {
+  color: white !important;
+}
+
 /** Selection site web **/
 ::selection {
   color: #ffffff;
