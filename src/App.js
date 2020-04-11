@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import InfoGlobal from "./components/InfoGlobal";
 import SearchInfo from "./components/SearchInfo";
 import CountryInfo from "./components/CountryInfo";
+import Particles from "react-particles-js";
 import { Grid } from "@material-ui/core";
 import "./App.css";
 
@@ -26,6 +27,17 @@ class App extends Component {
 
   render() {
     const { data } = this.state;
+    const paramsParticles = {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 1000,
+          },
+        },
+      },
+    };
 
     return (
       <>
@@ -49,6 +61,7 @@ class App extends Component {
         <Grid container direction="row" justify="center" alignItems="center">
           <CountryInfo Countries={data.Countries} />
         </Grid>
+        <Particles className="particles" params={paramsParticles} />
       </>
     );
   }

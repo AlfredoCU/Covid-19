@@ -102,7 +102,7 @@ input:focus {
   color: white !important;
 }
 
-/** Selection site web **/
+/** SELECTION SITE WEB **/
 ::selection {
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.25);
@@ -113,7 +113,7 @@ input:focus {
   background-color: rgba(33, 150, 243, 0.25);
 }
 
-/** Body Scroll **/
+/** BODY SCROLL **/
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -138,4 +138,14 @@ td {
 
 th {
   font-weight: bold !important;
+}
+
+/** PARTICLES **/
+.particles {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: fixed;
 }
