@@ -68,3 +68,79 @@ class App extends Component {
 }
 
 export default App;
+
+/* 
+
+class App extends Component {
+  state = {
+    data: [],
+    filterText: "Mexico",
+  };
+
+  stateData = (dataApi) => {
+    this.setState({ data: dataApi });
+  };
+
+  getData = async () => {
+    let response = await fetch("https://api.covid19api.com/summary");
+    let data = await response.json();
+    this.stateData(data);
+  };
+
+  handleFilterTextChange = (filterText) => {
+    this.setState({ filterText: filterText });
+  };
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  render() {
+    const { data, filterText } = this.state;
+    const paramsParticles = {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 1000,
+          },
+        },
+      },
+    };
+
+    return (
+      <>
+        <header className="app-header">
+          <h1>COVID-19</h1>
+        </header>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <InfoGlobal
+            date={data.Date}
+            NewConfirmed={data.Global && data.Global.NewConfirmed}
+            TotalConfirmed={data.Global && data.Global.TotalConfirmed}
+            NewDeaths={data.Global && data.Global.NewDeaths}
+            TotalDeaths={data.Global && data.Global.TotalDeaths}
+            NewRecovered={data.Global && data.Global.NewRecovered}
+            TotalRecovered={data.Global && data.Global.TotalRecovered}
+          />
+        </Grid>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <SearchInfo
+            Countries={data.Countries}
+            filterText={filterText}
+            onFilterTextChange={this.handleFilterTextChange}
+          />
+        </Grid>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <CountryInfo Countries={data.Countries} />
+        </Grid>
+        <Particles className="particles" params={paramsParticles} />
+      </>
+    );
+  }
+}
+
+export default App;
+
+*/

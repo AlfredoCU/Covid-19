@@ -1,6 +1,4 @@
 import React from "react";
-import moment from "moment";
-import "moment/locale/es";
 import IconNewConfirmed from "@material-ui/icons/AddAlert";
 import IconTotalConfirmed from "@material-ui/icons/AirlineSeatFlat";
 import IconNewDeaths from "@material-ui/icons/NewReleases";
@@ -8,32 +6,17 @@ import IconTotalDeaths from "@material-ui/icons/MoodBad";
 import IconNewRecovered from "@material-ui/icons/AccessibilityNew";
 import IconTotalRecovered from "@material-ui/icons/EmojiEmotions";
 import {
-  Card,
-  CardHeader,
   List,
   Avatar,
+  ListItemAvatar,
   ListItem,
   ListItemText,
-  ListItemAvatar,
 } from "@material-ui/core";
 
-const InfoGlobal = ({
-  date,
-  NewConfirmed,
-  TotalConfirmed,
-  NewDeaths,
-  TotalDeaths,
-  NewRecovered,
-  TotalRecovered,
-}) => {
-  moment.locale("es");
-
+const SearchCountryInfo = ({ Countries }) => {
   return (
-    <Card className="card">
-      <CardHeader
-        title="Información Global"
-        subheader={moment(date).format("LLLL")}
-      />
+    <>
+      <h2>País: {Countries.Country}</h2>
       <div className="card-row">
         <List>
           <ListItem>
@@ -43,8 +26,8 @@ const InfoGlobal = ({
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary={NewConfirmed}
-              secondary="Nuevos confirmado"
+              primary={Countries.NewConfirmed}
+              secondary="Nuevos confirmado:"
             />
           </ListItem>
           <ListItem>
@@ -54,8 +37,8 @@ const InfoGlobal = ({
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary={TotalConfirmed}
-              secondary="Total confirmado"
+              primary={Countries.TotalConfirmed}
+              secondary="Total confirmado:"
             />
           </ListItem>
           <ListItem>
@@ -64,7 +47,10 @@ const InfoGlobal = ({
                 <IconNewDeaths className="color2" />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary={NewDeaths} secondary="Nuevas muertes" />
+            <ListItemText
+              primary={Countries.NewDeaths}
+              secondary="Nuevas muertes:"
+            />
           </ListItem>
         </List>
 
@@ -75,7 +61,10 @@ const InfoGlobal = ({
                 <IconTotalDeaths className="color2" />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary={TotalDeaths} secondary="Muertes totales" />
+            <ListItemText
+              primary={Countries.TotalDeaths}
+              secondary="Muertes totales:"
+            />
           </ListItem>
           <ListItem>
             <ListItemAvatar>
@@ -84,8 +73,8 @@ const InfoGlobal = ({
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary={NewRecovered}
-              secondary="Nuevos recuperado"
+              primary={Countries.NewRecovered}
+              secondary="Nuevos recuperado:"
             />
           </ListItem>
           <ListItem>
@@ -95,14 +84,14 @@ const InfoGlobal = ({
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary={TotalRecovered}
-              secondary="Total recuperado"
+              primary={Countries.TotalRecovered}
+              secondary="Total recuperado:"
             />
           </ListItem>
         </List>
       </div>
-    </Card>
+    </>
   );
 };
 
-export default InfoGlobal;
+export default SearchCountryInfo;
