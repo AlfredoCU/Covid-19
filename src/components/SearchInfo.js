@@ -57,7 +57,7 @@ class SearchInfo extends Component {
                 }
                 rows.push(<SearchCountryInfo key={key} Countries={item} />);
               })}
-            <div>{rows.length > 1 ? "Sin resultados..." : rows}</div>
+            <div>{rows.length > 2 ? "Sin resultados..." : rows}</div>
           </div>
         </div>
       </Card>
