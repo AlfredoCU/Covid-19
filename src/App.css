@@ -94,12 +94,35 @@ input:focus {
   border: 2px solid #f50057;
 }
 
+/** TABLE **/
 .MuiSelect-select.MuiSelect-select {
   color: white;
 }
 
 .MuiSelect-icon {
   color: white !important;
+}
+
+th,
+td {
+  color: white !important;
+  text-align: center !important;
+  border-bottom: 1px solid #651fff !important;
+  box-shadow: 0 3px 2px -2px rgba(101, 31, 255, 0.25) !important;
+}
+
+th {
+  font-weight: bold !important;
+}
+
+/** PARTICLES **/
+.particles {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: fixed;
 }
 
 /** SELECTION SITE WEB **/
@@ -126,26 +149,4 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgba(211, 211, 211, 0.4);
-}
-
-th,
-td {
-  text-align: center !important;
-  color: white !important;
-  border-bottom: 1px solid #651fff !important;
-  box-shadow: 0 3px 2px -2px rgba(101, 31, 255, 0.25) !important;
-}
-
-th {
-  font-weight: bold !important;
-}
-
-/** PARTICLES **/
-.particles {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  position: fixed;
 }
